@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio - John Doe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for subtle animations and enhancements */
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+        .project-card:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom dark mode toggle if needed */
+        .dark-mode {
+            background-color: 1a202c;
+            color: #e2e8f0;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 smooth-scroll">
+
+    <!-- Header / Navbar -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-indigo-600">Oktavia Ayu Andini</h1>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#home" class="hover:text-indigo-600 transition-colors">Home</a></li>
+                <li><a href="#about" class="hover:text-indigo-600 transition-colors">About</a></li>
+                <li><a href="#skills" class="hover:text-indigo-600 transition-colors">Skills</a></li>
+                <li><a href="#portfolio" class="hover:text-indigo-600 transition-colors">Portfolio</a></li>
+                <li><a href="#contact" class="hover:text-indigo-600 transition-colors">Contact</a></li>
+            </ul>
+            <button id="menu-toggle" class="md:hidden text-gray-700 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t shadow-md">
+            <ul class="px-4 py-2 space-y-2">
+                <li><a href="#home" class="block hover:text-indigo-600 transition-colors">Home</a></li>
+                <li><a href="#about" class="block hover:text-indigo-600 transition-colors">About</a></li>
+                <li><a href="#skills" class="block hover:text-indigo-600 transition-colors">Skills</a></li>
+                <li><a href="#portfolio" class="block hover:text-indigo-600 transition-colors">Portfolio</a></li>
+                <li><a href="#contact" class="block hover:text-indigo-600 transition-colors">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-gradient-to-br from-gray-500 via-pink-500 to-gray-500 text-white min-h-screen flex items-center justify-center">
+        <div class="container mx-auto px-4 text-center">
+            <div class="fade-in">
+                <img src="images/Ayu.jpg" alt="Foto profile" class="rounded-full border-4 border-white mx-auto mb-6" style="width: 350px; height: 350px; object-fit: cover;" />
+                <h1 class="text-5xl font-bold mb-4">Hi, I'm Oktavia Ayu Andini</h1>
+                <p class="text-xl mb-6">Junior Data Analyst | Python, SQL, Power BI | Turning Data into Decisions</p>
+                <p class="text-lg max-w-2xl mx-auto mb-8">Data Analyst dengan kemampuan mengolah dan menganalisis data menggunakan Python dan SQL. Terampil dalam membuat visualisasi data dan laporan dengan Excel maupun Power BI untuk mendukung pengambilan keputusan bisnis. Berfokus pada penyajian insight yang mudah dipahami guna meningkatkan kinerja tim dan strategi perusahaan.</p>
+                <a href="#contact" class="bg-white text-indigo-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition-colors">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/39325667-bb64-4d3b-a918-8c92e8514e37.png" alt="Illustrative image of a developer coding at a desk with multiple monitors showing code editors, surrounded by coffee mugs and tech gadgets in a cozy home office setup with natural light from a window." class="rounded-lg shadow-lg" />
+                </div>
+                <div class="md:w-1/2 md:ml-8">
+                    <p class="text-lg mb-4">Saya adalah lulusan Teknik Informatika Telkom University Purwokerto dengan ketertarikan di bidang data analysis dan cloud computing.</p>
+                    <p class="text-lg mb-4">Terampil menggunakan Python dan SQL untuk mengolah serta memvisualisasikan data guna mendukung pengambilan keputusan.</p>
+                    <p class="text-lg">Berpengalaman di organisasi, bisnis, dan operasional yang memperkuat kemampuan analisis sekaligus pemahaman konteks bisnis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">My Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <h3 class="text-xl font-semibold mb-4">Teknologi</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>HTML5, CSS, JavaScript</li>
+                        <li>Database (MySQL, PostgreSQL)</li>
+                        <li>Google Cloud (GCP,AWS)</li>
+                        <li>Python</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <h3 class="text-xl font-semibold mb-4">Administrasi</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>Microfost office(Word, Excel, PPT)</li>
+                        <li>Google Spreadsheet</li>
+                        <li>Gmail/Outlook</li>
+                        <li>Git&Github</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <h3 class="text-xl font-semibold mb-4">Softskill</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>Time Management</li>
+                        <li>Organizational skill</li>
+                        <li>Teamwork & Collaboration</li>
+                        <li>Adaptability & Flexibility</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Portfolio</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="project-card bg-gray-100 p-6 rounded-lg shadow-md">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/52271f9a-e398-4a2f-9a46-504fdb9b9a73.png" alt="Detailed screenshot of an e-commerce website homepage featuring a hero banner with promotional sale text, product grid with high-quality images of shoes and accessories, shopping cart icon, and user navigation menu in a modern blue and orange color scheme with mobile-responsive design." class="rounded-lg mb-4 w-full" />
+                    <h3 class="text-xl font-semibold mb-2">E-Commerce Platform</h3>
+                    <p class="text-gray-600 mb-4">A full-featured online store built with React and Node.js, featuring product catalogs, user authentication, and payment integration.</p>
+                    <a href="#" class="text-indigo-600 hover:underline">View Project</a>
+                </div>
+                <div class="project-card bg-gray-100 p-6 rounded-lg shadow-md">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1615c8a7-89f4-44b7-8c11-790165ca2afc.png" alt="Screenshot of a personal blog website with a clean layout, article previews showing headings and excerpts, author bio, social media sharing buttons, and a sidebar with recent posts in a minimalist white and gray design with typography focus." class="rounded-lg mb-4 w-full" />
+                    <h3 class="text-xl font-semibold mb-2">Blog Application</h3>
+                    <p class="text-gray-600 mb-4">A responsive blog built with Vue.js and Firebase, including user profiles, commenting system, and real-time updates.</p>
+                    <a href="#" class="text-indigo-600 hover:underline">View Project</a>
+                </div>
+                <div class="project-card bg-gray-100 p-6 rounded-lg shadow-md">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0e436292-b511-4c1e-89a2-368648eef615.png" alt="Image of a task management app interface displaying a dashboard with task lists, progress bars, team collaboration features, calendar view, and notifications in a professional green and blue themed UI with intuitive navigation and mobile adaptability." class="rounded-lg mb-4 w-full" />
+                    <h3 class="text-xl font-semibold mb-2">Task Manager</h3>
+                    <p class="text-gray-600 mb-4">A collaborative task management tool developed with MERN stack, supporting real-time collaboration and project tracking.</p>
+                    <a href="#" class="text-indigo-600 hover:underline">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Testimonials</h2>
+            <div id="testimonials-list" class="space-y-6">
+                <!-- Testimonials will be loaded here via JavaScript -->
+            </div>
+            <div class="mt-10 bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-4">Leave a Review</h3>
+                <form id="review-form" class="space-y-4">
+                    <div>
+                        <label for="review-name" class="block text-gray-700 mb-2">Name</label>
+                        <input type="text" id="review-name" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" required />
+                    </div>
+                    <div>
+                        <label for="review-text" class="block text-gray-700 mb-2">Review</label>
+                        <textarea id="review-text" rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" required></textarea>
+                    </div>
+                    <button type="submit" class="bg-indigo-600 text-white px-6 py-3 rounded-md hover:bg-indigo-700 transition-colors">Submit Review</button>
+                </form>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Get In Touch</h2>
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <h3 class="text-2xl font-semibold mb-4">Let's Connect</h3>
+                    <p class="text-lg mb-4">I'm always open to discussing new opportunities, interesting projects, or just having a chat about technology. Feel free to reach out!</p>
+                    <div class="space-y-2">
+                        <p><strong>Email:</strong> john.doe@example.com</p>
+                        <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+                        <p><strong>Location:</strong> San Francisco, CA</p>
+                    </div>
+                    <div class="mt-6">
+                        <a href="https://linkedin.com/in/johndoe" class="text-indigo-600 hover:underline mr-4">LinkedIn</a>
+                        <a href="https://github.com/johndoe" class="text-indigo-600 hover:underline">GitHub</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 md:ml-8">
+                    <form class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 mb-2">Name</label>
+                            <input type="text" id="name" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-gray-700 mb-2">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+                        </div>
+                        <button type="submit" class="bg-indigo-600 text-white px-6 py-3 rounded-md hover:bg-indigo-700 transition-colors w-full">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2023 John Doe. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for interactivity -->
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navbar links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Close mobile menu if open
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Simple form submission (placeholder)
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I\'ll get back to you soon.');
+            // In a real scenario, you'd handle the form data here
+        });
+
+        // Fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
+</content>
+</create_file> 
+
+
